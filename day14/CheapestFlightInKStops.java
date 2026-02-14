@@ -13,7 +13,8 @@ public class CheapestFlightInKStops {
             int[] temp = Arrays.copyOf(dist, size);
             for (int[] flight : flights) {
                 int cs = flight[0], cd = flight[1], cost = flight[2];
-                if (dist[cs] != Integer.MAX_VALUE && dist[cs] + cost < temp[cd]) 
+                if (dist[cs] != Integer.MAX_VALUE && 
+                                                dist[cs] + cost < temp[cd]) 
                     temp[cd] = dist[cs] + cost;
             }
             dist = temp;
